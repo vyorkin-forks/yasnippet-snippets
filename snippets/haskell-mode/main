@@ -3,5 +3,5 @@
 # key: main
 # expand-env: ((yas-indent-line 'fixed))
 # --
-main ∷ IO ()
+main :: IO ()
 main = do $0

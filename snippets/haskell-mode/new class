@@ -4,4 +4,4 @@
 # expand-env: ((yas-indent-line 'fixed))
 # --
 class ${1:Name} where
-      $0
+  $0
