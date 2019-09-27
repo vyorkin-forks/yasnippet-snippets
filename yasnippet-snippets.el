@@ -4,7 +4,7 @@
 
 ;; Author: Andrea Crotti <andrea.crotti.0@gmail.com>
 ;; Keywords: snippets
-;; Version: 1.0.3
+;; Version: 0.2
 ;; Package-Requires: ((yasnippet "0.8.0"))
 ;; Keywords: convenience, snippets
 
@@ -44,8 +44,19 @@
 
 ;;;###autoload
 (defun yasnippet-snippets-initialize ()
+  "Load the `yasnippet-snippets' snippets directory."
   (add-to-list 'yas-snippet-dirs 'yasnippet-snippets-dir t)
-  (yas-load-directory yasnippet-snippets-dir))
+  (yas-load-directory yasnippet-snippets-dir t))
+
+(defgroup yasnippet-snippets nil
+  "Options for yasnippet setups.
+
+This is useful for customizing options declared in
+“.yas-setup.el” files.  For example, you could declare a
+customizable variable used for a snippet expansion.
+
+See Info node `(elisp)Customization Types'."
+  :group 'yasnippet)
 
 ;;;###autoload
 (eval-after-load 'yasnippet
